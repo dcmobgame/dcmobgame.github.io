@@ -7,4 +7,4 @@ openx.com, 540785403, RESELLER, 6a698e2ec38604c6
 indexexchange.com, 191086, RESELLER
 pubmatic.com, 158862, RESELLER, 5d62403b186f2ace
 
-adcolony.com, 60292ba3fc7acddf31598729fac2dcee, DIRECT, 1ad675c9de6b5176
+adcolony.com, 859462ba32b9870c94e127ddf5244a78, DIRECT, 1ad675c9de6b5176
