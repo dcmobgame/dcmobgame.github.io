@@ -225,6 +225,18 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })
     }, csrDelayTime)
   })
+
+  
+  var t2 = window.setInterval(function() {
+  var a = $(".s-footer-logo-wrapper").html();
+  var b = $(".logo").html();
+				//  ------进⾏剪切
+				a = a.substr(0,a.indexOf("."));
+				b = b.substr(0,b.indexOf("."));
+				//  ----- 替换原来的数据
+				$(".s-footer-logo-wrapper").html(a);
+				$(".logo").html(b);
+},500)
 </script>
 </body>
 </html>
