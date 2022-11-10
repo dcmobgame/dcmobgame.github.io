@@ -1,4 +1,4 @@
-# 2022-11-01 22:30
+# 2022-11-10 12:24
 
 # Admob
 google.com, pub-4426502854658181, DIRECT, f08c47fec0942fa0
@@ -368,6 +368,7 @@ fyber.com, 209521, DIRECT
 
 # pangle global
 pangleglobal.com, 54852,DIRECT
+pubmatic.com, 161490, RESELLER, 5d62403b186f2ace
 
 # ironSrouce
 ironsrc.com, 268077, Direct
