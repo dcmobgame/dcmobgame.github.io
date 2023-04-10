@@ -4,6 +4,7 @@ google.com, pub-4426502854658181, DIRECT, f08c47fec0942fa0
 
 # Facebook
 facebook.com, 962690850763489, DIRECT, c3e20eee3f780d68
+facebook.com, 2403290579831579, DIRECT, c3e20eee3f780d68
 
 # Applovin
 applovin.com, 439b06fe47fe119aed16b518391bd328, DIRECT
