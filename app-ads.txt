@@ -1,4 +1,4 @@
-# 2023-09-27 16:09
+# 2023-10-08 11:01
 
 # Admob
 google.com, pub-4426502854658181, DIRECT, f08c47fec0942fa0
@@ -950,7 +950,7 @@ inmobi.com, 445a21be4613492a9545763b8c4bc548, DIRECT, 83e75a7ae333ca9d
 ad-generation.jp, 13687, DIRECT, 7f4ea9029ac04e53
 
 
-# Chartboost 20231008
+# Chartboost
 chartboost.com, 64c75128890b842b462b453f, DIRECT
 appnexus.com, 10005, RESELLER, f5ab79cb980f11d1
 bidmachine.io, 98, RESELLER
