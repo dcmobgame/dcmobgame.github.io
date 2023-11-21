@@ -194,10 +194,16 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   }
 
   function addLink(){
-	   var filtered = $('.s-nav-li').children().filter('.s-nav-link-container').children().eq(8);
-	   var navEle = filtered.parent().parent();
-	   navEle.after("<li class=\"s-nav-li\"><div class=\"s-nav-link-container\"><a class=\"s-font-body\" href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\">Terms Of Use</a></div></li>");
-  }
+
+		var targetEle = $("#termsofuse");
+		if(targetEle){
+
+			var filtered = $('.s-nav-li').children().filter('.s-nav-link-container').children().eq(8);
+			var navEle = filtered.parent().parent();
+			navEle.after("<li id=\"termsofuse\" class=\"s-nav-li\"><div class=\"s-nav-link-container\"><a class=\"s-font-body\" href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\">Terms Of Use</a></div></li>");
+  
+		}
+	}
 
   window.addEventListener('load', function() {
     setTimeout(function() {
