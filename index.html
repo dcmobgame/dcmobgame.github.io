@@ -181,6 +181,13 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         callback && callback();
       }
   }
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      downloadJSAtOnload(linkBundle, function() {
+        
+      })
+    }, csrDelayTime)
+  })
   
   var t2 = window.setInterval(function() {
   var a = $(".s-footer-logo-wrapper").html();
