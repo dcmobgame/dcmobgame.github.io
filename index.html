@@ -172,7 +172,15 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   var csrDelayTime = window.delayTimeOfJsLoading || 0
   var linkBundle = "/js/bundle.js"
   
-
+  function downloadJSAtOnload(link, callback) {
+      var element = document.createElement("script");
+      element.src = link;
+      element.async = true;
+      document.body.appendChild(element);
+      element.onload = function() {
+        callback && callback();
+      }
+  }
   
   var t2 = window.setInterval(function() {
   var a = $(".s-footer-logo-wrapper").html();
