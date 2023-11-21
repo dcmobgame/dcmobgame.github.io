@@ -207,13 +207,19 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         }
         if (window.afterBundleLoadTrack) {
           afterBundleLoadTrack();
-		  deleteLogo();
-		  addLink();
         }
       })
     }, csrDelayTime)
   })
   
+  window.addEventListener('load', function(){
+  	  setTimeout(function(){
+	  
+		  deleteLogo();
+		  addLink();
+
+	  }, csrDelayTime+500);
+  })
 </script>
 </body>
 </html>
