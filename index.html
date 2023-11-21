@@ -196,7 +196,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   function addLink(){
 
 		var targetEle = $("#termsofuse");
-		if(targetEle){
+		if(targetEle.length == 0){
 
 			var filtered = $('.s-nav-li').children().filter('.s-nav-link-container').children().eq(8);
 			var navEle = filtered.parent().parent();
