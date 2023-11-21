@@ -181,24 +181,39 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         callback && callback();
       }
   }
+
+  function deleteLogo(){
+  	   var a = $(".s-footer-logo-wrapper").html();
+	   var b = $(".logo").html();
+		//  ------进⾏剪切
+		a = a.substr(0,a.indexOf("."));
+		b = b.substr(0,b.indexOf("."));
+		//  ----- 替换原来的数据
+		$(".s-footer-logo-wrapper").html(a);
+		$(".logo").html(b);
+  }
+
+  function addLink(){
+	   var filtered = $('.s-nav-li').children().filter('.s-nav-link-container').children().eq(8);
+	   var navEle = filtered.parent().parent();
+	   navEle.after("<li class=\"s-nav-li\"><div class=\"s-nav-link-container\"><a class=\"s-font-body\" href=\"https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\">Terms Of Use</a></div></li>");
+  }
+
   window.addEventListener('load', function() {
     setTimeout(function() {
       downloadJSAtOnload(linkBundle, function() {
-        
+        if (window._) {
+          window._.VERSION = '4.17.21';
+        }
+        if (window.afterBundleLoadTrack) {
+          afterBundleLoadTrack();
+		  deleteLogo();
+		  addLink();
+        }
       })
     }, csrDelayTime)
   })
   
-  var t2 = window.setInterval(function() {
-  var a = $(".s-footer-logo-wrapper").html();
-  var b = $(".logo").html();
-				//  ------进⾏剪切
-				a = a.substr(0,a.indexOf("."));
-				b = b.substr(0,b.indexOf("."));
-				//  ----- 替换原来的数据
-				$(".s-footer-logo-wrapper").html(a);
-				$(".logo").html(b);
-},500)
 </script>
 </body>
 </html>
