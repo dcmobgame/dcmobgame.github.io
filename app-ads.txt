@@ -1958,6 +1958,7 @@ sharethrough.com,iBAzay96,RESELLER,d53b998a7bd4ecd2
 rubiconproject.com,24600,RESELLER,0bfd66d529a55807
 playdigo.com,1952,RESELLER
 Adsolut.in,17068,RESELLER
+Adsolut.in,17060,RESELLER
 freewheel.tv,1603413,RESELLER
 freewheel.tv,1603410,RESELLER
 improvedigital.com,1057,RESELLER
