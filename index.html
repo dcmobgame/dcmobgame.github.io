@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link defer='true' href='/image/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;700&display=swap">
@@ -72,7 +73,31 @@
         display: flex;
         gap: 24px;
       }
-      @media (max-width: 839px) {
+      @media  (max-width: 479px) {
+  .store {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    bottom: 8px;
+  }
+
+  .store img.download-img {
+    width: 88px; 
+  }
+}
+@media (min-width: 480px) and  (max-width: 699px) {
+  .store {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    bottom: 24px;
+  }
+
+  .store img.download-img {
+    width: 100px; 
+  }
+}
+      @media (min-width: 700px) and  (max-width: 839px) {
   .store {
     flex-direction: column;
     align-items: center;
