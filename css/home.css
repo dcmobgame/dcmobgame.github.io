@@ -144,7 +144,8 @@ body { overflow-x: clip; background: var(--home-surface); }
 .store-option { gap: 9px; }
 
 .store-badge-link {
-  display: block;
+  display: flex;
+  justify-content: center;
   line-height: 0;
   border-radius: 10px;
   transition: transform 0.22s ease, filter 0.22s ease;
@@ -301,7 +302,7 @@ body { overflow-x: clip; background: var(--home-surface); }
   .store-panel {
     top: calc(114px + 56.25vw - 22px);
     bottom: auto;
-    width: calc(100% - 24px);
+    width: 90%;
     max-width: 410px;
     margin-bottom: 0;
     padding: 15px 12px 13px;

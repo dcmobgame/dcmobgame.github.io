@@ -38,7 +38,7 @@ test('homepage exposes the responsive semantic shell', () => {
   const home = readPage('index.html');
   const homeStyles = readPage('css/home.css');
 
-  assert.match(home, /href="\.\/css\/home\.css"/);
+  assert.match(home, /href="\.\/css\/home\.css(?:\?[^\"]+)?"/);
   assert.match(home, /<nav class="primary-nav" aria-label="Primary navigation">/);
   assert.match(home, /class="brand-link" href="\.\/index\.html"/);
   assert.match(home, /class="hero-kicker">Choose your platform</);
