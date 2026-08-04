@@ -30,6 +30,14 @@
   --glow-secondary: rgba(121, 91, 255, 0.46);
 }
 
+.privacy-theme {
+  --gradient-start: #220044;
+  --gradient-middle: #5b28ba;
+  --gradient-end: #079bc1;
+  --glow-primary: rgba(36, 220, 210, 0.34);
+  --glow-secondary: rgba(182, 76, 255, 0.42);
+}
+
 * {
   box-sizing: border-box;
 }
