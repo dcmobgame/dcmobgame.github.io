@@ -41,11 +41,10 @@
         font-weight: bold;
         font-family: "alata", "PingFang SC", "Microsoft YaHei", "微软雅黑",
           STXihei, "华文细黑", sans-serif;
+        background: transparent;
+        border: 0;
         cursor: pointer;
       }
-      .header-text:last-child {
-  margin-right: 66px;
-}
       .header-text.black {
   color: black !important;
 }
@@ -55,6 +54,80 @@
 }
       .header-text:hover {
         border-bottom: 1px solid white;
+      }
+
+      .header-text:focus-visible,
+      .terms-menu summary:focus-visible,
+      .terms-menu a:focus-visible,
+      .store-terms-link:focus-visible {
+        outline: 3px solid #ffd86b;
+        outline-offset: 4px;
+      }
+
+      .terms-menu {
+        position: relative;
+        margin-right: 66px;
+        color: white;
+        font-family: "alata", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      .terms-menu summary {
+        padding: 9px 14px;
+        font-size: 16px;
+        font-weight: bold;
+        list-style: none;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.64);
+        border-radius: 999px;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+      }
+
+      .terms-menu summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .terms-menu summary::after {
+        content: "▾";
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .terms-menu[open] summary,
+      .terms-menu summary:hover {
+        background: rgba(255, 255, 255, 0.26);
+      }
+
+      .header.bg-white .terms-menu summary {
+        color: #1d2023;
+        background: rgba(136, 1, 194, 0.08);
+        border-color: rgba(136, 1, 194, 0.35);
+      }
+
+      .terms-menu-panel {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        display: grid;
+        min-width: 160px;
+        padding: 8px;
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid rgba(136, 1, 194, 0.16);
+        border-radius: 14px;
+        box-shadow: 0 16px 40px rgba(53, 0, 75, 0.22);
+      }
+
+      .terms-menu-panel a {
+        padding: 10px 12px;
+        color: #4f275d;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 9px;
+      }
+
+      .terms-menu-panel a:hover {
+        color: #7d06aa;
+        background: rgba(136, 1, 194, 0.08);
       }
 
       .main-box {
@@ -72,6 +145,68 @@
         position: absolute;
         display: flex;
         gap: 24px;
+      }
+
+      .store-option {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .store-terms-link {
+        padding: 6px 14px;
+        color: white;
+        font-family: "alata", "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+        text-shadow: 0 1px 8px rgba(42, 0, 58, 0.7);
+        background: rgba(70, 0, 95, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.56);
+        border-radius: 999px;
+        backdrop-filter: blur(6px);
+      }
+
+      .store-terms-link:hover {
+        background: rgba(255, 255, 255, 0.22);
+        border-color: white;
+      }
+
+      @media (max-width: 699px) {
+        .header {
+          justify-content: center;
+          gap: 8px;
+          padding: 0 8px;
+        }
+
+        .header-text,
+        .terms-menu summary {
+          font-size: 12px;
+        }
+
+        .terms-menu {
+          margin-right: 0;
+        }
+
+        .terms-menu summary {
+          padding: 7px 9px;
+        }
+
+        .terms-menu-panel {
+          right: 0;
+          min-width: 144px;
+        }
+
+        .store-option {
+          gap: 4px;
+        }
+
+        .store-terms-link {
+          padding: 4px 9px;
+          font-size: 10px;
+        }
       }
       @media  (max-width: 479px) {
   .store {
@@ -178,14 +313,27 @@
   </head>
   <body>
     <div class="header">
-      <div class="header-text">Privacy Policy</div>
-      <div class="header-text">Contact Us</div>
+      <button class="header-text" type="button">Privacy Policy</button>
+      <button class="header-text" type="button">Contact Us</button>
+      <details class="terms-menu">
+        <summary>Terms of Use</summary>
+        <div class="terms-menu-panel">
+          <a href="./terms-ios.html">iOS</a>
+          <a href="./terms-google-play.html">Google Play</a>
+        </div>
+      </details>
     </div>
     <div class="main-box">
       <img class="main-img" src="./image/mainImg.jpg" alt="mainImg" />
       <div class="store">
-        <img class="google-img download-img" src="./image/icon_google_play@2x.png" alt="Google" />
-        <img class="ios-img download-img" src="./image/icon_ios_play@2x.png" alt="IOS" />
+        <div class="store-option">
+          <img class="google-img download-img" src="./image/icon_google_play@2x.png" alt="Google Play" />
+          <a class="store-terms-link" href="./terms-google-play.html" aria-label="Google Play Terms of Use">Terms of Use</a>
+        </div>
+        <div class="store-option">
+          <img class="ios-img download-img" src="./image/icon_ios_play@2x.png" alt="iOS App Store" />
+          <a class="store-terms-link" href="./terms-ios.html" aria-label="iOS Terms of Use">Terms of Use</a>
+        </div>
       </div>
 
     </div>

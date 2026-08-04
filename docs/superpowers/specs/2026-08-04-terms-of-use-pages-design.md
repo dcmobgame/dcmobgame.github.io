@@ -20,6 +20,8 @@ Add clear, platform-specific Terms of Use entry points to the DoviGames website 
 ## Visual Design
 
 - Continue the site's purple background treatment and white foreground text.
+- Give each platform a richer multi-layer gradient: iOS blends deep purple, violet, and soft rose highlights; Google Play blends deep purple, indigo, and restrained cyan highlights.
+- Use large translucent radial highlights over the base gradient to add depth without animation or visual noise.
 - Use a restrained translucent surface, rounded borders, and clear spacing for legal content.
 - Keep the legal text column narrow enough for comfortable reading.
 - Make the header control more visually distinct than the other navigation labels without dominating the hero image.
